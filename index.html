@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | Yasin Halebi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="imgs/png" href="imgs/475497.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container" >
+          <div class="linkedin" id="linkedin">
+            <img src="imgs/profile.jpeg" alt="">
+            <h3>Yasin Halebi <i class="fa-sharp fa-solid fa-circle-check""></i></h3>
+          </div>
+          <div class="mood">
+            <div class="parent" id="parent">
+                <i class="fa-solid fa-moon hidden" id="dark"></i>
+                <div class="child light" id="children"></div>
+                <i class="fa-solid fa-sun" id="sun"></i>
+            </div>
+          </div>
+        </div>
+
+        
+  </header> 
+  <div class="calculator" id="calculator">
+    <div class="container">
+        <div class="box">
+            <input type="text" value="0" name="epnty-area" id="empty-area">
+            <div class="c number"><i class="fa-solid fa-c"></i></div>
+            <div class="delete number"><i class="fa-solid fa-delete-left"></i></div>
+            <div class="one-devide number">1/x</div>
+            <div class="square number">x<sup>2</sup></div>
+            <div class="root number">&#8730;x</div>
+            <div class="devide op number"><i class="fa-solid fa-divide"></i></div>
+            <div class="seven number numbers">7</div>
+            <div class="eight number numbers">8</div>
+            <div class="nine number numbers">9</div>
+            <div class="multiply op number"><i class="fa-solid fa-xmark"></i></div>
+            <div class="four number numbers">4</div>
+            <div class="five number numbers">5</div>
+            <div class="six number numbers">6</div>
+            <div class="minus op number"><i class="fa-solid fa-minus"></i></div>
+            <div class="three number numbers">3</div>
+            <div class="two number numbers">2</div>
+            <div class="one number numbers">1</div>
+            <div class="plus op number"><i class="fa-solid fa-plus"></i></div>
+            <div class="zero number numbers">0</div>
+            <div class="dot number">,</div>
+            <div class="equal number" id="equal"><i class="fa-solid fa-equals"></i></div>
+        </div>
+    </div>
+</div>
+
+    <script src="js.js"></script>
+    <audio src="audio/but-effect.mp3" id="audio"></audio>
+    <audio src="audio/others.mp3" id="others"></audio>
+</body>
+</html>

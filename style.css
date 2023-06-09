@@ -1,0 +1,566 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 700px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;  
+  }
+}
+body {
+    position: relative;
+}
+
+
+header{
+  top: 0;
+  height: 130px;  
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  background: linear-gradient( rgba(59, 97, 95, 0.397)25%,#877c9400 100% );
+  z-index: 5;
+  position:  fixed;
+}
+header .container{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .linkedin{
+  display: inline-flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  cursor: pointer;
+}
+header .container .linkedin img{
+  height: 100%;
+  border-radius: 50%;
+  outline: solid 2px aqua;
+  box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.1);
+}
+header .container .linkedin h3{
+  margin-left: 15px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: 0;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: -20px 20px 20px rgba(0, 0, 0, 0.05);
+}
+header .container h3 i{
+  color: #7c7ce4;
+}
+header .mood .parent{
+    height: 40px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    outline: solid 4px bisque;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    position: relative;
+    justify-content: space-between;
+    padding: 13px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+header .mood .parent i{
+    font-size: 18px;
+}
+header .mood .parent .fa-moon{
+    color: black;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+header .mood .parent .fa-sun{
+    color: bisque;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+header .mood .parent i.hidden{
+    opacity: 0;
+}
+header .mood .parent .child{
+    height: 30px;
+    width: 30px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    border: solid 2px bisque;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    position: absolute;
+    z-index: 6;
+    transition: 0.3s;
+}
+header .mood .parent .child.dark{
+    left: 45%;
+}
+header .mood .parent .child.light{
+    left: 0;
+}
+.calculator {
+    background-image: url(imgs/backk.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    min-height: 100vh;
+  }
+.calculator::after{
+    content: "";
+    background-image: url(imgs/pngimg.com\ -\ drops_PNG13485.png);
+    background-repeat: repeat;
+    background-size: auto;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -3;
+    height: 100%;
+    opacity: 0.1;
+    filter: blur(1px);
+  }
+.calculator .container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    margin-top: 130px;  
+    z-index: 3;
+}
+
+.calculator .container .box{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    flex-wrap: wrap;
+    width: 600px;
+    gap: 4%;
+}
+@media(max-width:900px){
+    .calculator .container .box{
+        width: 300px;
+        gap: 4%;
+        overflow: hidden;
+    }
+    .calculator .container .box input{
+        border-radius: 30px 30px 10px 10px !important;
+    }
+    .calculator .container .box div{
+        border-radius: 10px !important;
+        font-size: 20px !important;
+        height: 50px !important;
+    }
+    header .container .linkedin img{
+        height: 75%;
+      }
+    header .container .linkedin h3{
+        font-size: 16px;
+    }
+    header .mood .parent{
+        height: 30px;
+        width: 60px;
+        outline: solid 4px bisque;
+        padding: 7px;
+    }
+    header .mood .parent .child{
+        height: 20px;
+        width: 20px;
+        margin: 8px;
+        display: flex;
+        align-items: center;
+        border: solid 2px bisque;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 25px;
+        position: absolute;
+        z-index: 6;
+        transition: 0.3s;
+    }
+}
+.calculator .container .box input{
+    width: 100%;
+    border-radius: 100px;
+    height: 100px;
+    outline: none;
+    padding: 50px;  
+    margin-bottom: 20px;
+    direction: rtl;
+    font-size: 40px;
+    font-weight: 500;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    font-family: 'Montserrat', sans-serif;
+    border: solid 2px #e4e4e4;
+    --moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator .container .box .c{
+    flex-basis: 74%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .delete{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .one-devide{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .square{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .root{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .devide{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .seven{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .eight{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .nine{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .multiply{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .four{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .five{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .six{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .minus{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .three{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .two{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .one{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .plus{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .zero{
+    flex-basis: 48%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .dot{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.calculator .container .box .equal{
+    flex-basis: 22%;
+    background-color: rgb(256,256,256, 0.9);
+    border: solid 2px rgb(192,192,192,0.8);
+    text-align: center;
+    border-radius: 25px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin-bottom: 15px;
+    transition:0.3s;
+}
+.box > *{
+    cursor: pointer;
+}
+.calculator .container .box div:hover{
+    background-color: rgb(256,256,256, 0.6);
+}
+.box input{
+    cursor: default;
+}
